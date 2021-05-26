@@ -11,7 +11,7 @@ and https://aboullaite.me/generate-qrcode-with-logo-image-using-zxing/
 ## Build and Deploy: 
 `./gradlew build && serverless deploy`
 
-_E.g. link:_ https://<some-id>.execute-api.ap-south-1.amazonaws.com/dev/qr.png?content=aHR0cHM6Ly9pY2FuaGFzLmNoZWV6YnVyZ2VyLmNvbS8=
+E.g. https://_some-id_.execute-api.ap-south-1.amazonaws.com/dev/qr.png?content=aHR0cHM6Ly9pY2FuaGFzLmNoZWV6YnVyZ2VyLmNvbS8=
 
 ## Teardown: 
 `serverless remove`
