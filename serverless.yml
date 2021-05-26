@@ -1,0 +1,25 @@
+service: qr
+
+frameworkVersion: ">=2.0.0 <3.0.0"
+
+provider:
+  name: aws
+  runtime: java8
+  memorySize: 1024
+  stage: dev
+  region: ap-south-1
+  lambdaHashingVersion: 20201221
+  apiGateway:
+    binaryMediaTypes: # needs to be */*, doesn't work with image/*
+      - '*/*'
+  
+package:
+  artifact: build/distributions/qr-image-generator.zip
+
+functions:
+  qrGenerator:
+    handler: com.serverless.Handler
+    events:
+      - http:
+          path: qr.png
+          method: get
